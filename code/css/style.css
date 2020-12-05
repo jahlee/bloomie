@@ -33,7 +33,7 @@ body {
 }
 
 .topnav a:hover {
-  background-color: black;
+  background-color: purple;
   color: #ddd;
 }
 
@@ -60,4 +60,9 @@ body {
 }
 .pic {
   background-color: #4caf50;
+}
+
+.topnav #secret:hover {
+  background-color: white;
+  color: black;
 }
