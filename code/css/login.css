@@ -6,12 +6,25 @@ body {
   background: #fff;
   align-items: center;
 }
+.fas {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  font-size: 30px;
+  color: black;
+}
+.fas:hover {
+  color: rebeccapurple;
+}
 a {
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
   color: cornflowerblue;
+}
+form {
+  display: inline;
 }
 .login-form {
   position: fixed;

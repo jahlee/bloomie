@@ -1,23 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="code/css/signup.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <title>Sign Up</title>
 </head>
+
 <body>
+  <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
   <div class="signup-form">
     <h1>Hello!</h1>
-    <form action="submit">
-      <input type="text" class="input-box" placeholder="Name">
-      <input type="email" class="input-box" placeholder="Email">
-      <input type="password" class="input-box" placeholder="Password">
+    <form id="signup-form">
+      <input type="text" class="input-box" placeholder="Name" name="text" required>
+      <input type="email" class="input-box" placeholder="Email" name="email" required>
+      <input type="password" class="input-box" placeholder="Password" name="password" required>
       <br>
       <br>
-      <button type="button" class="signup-button">Sign up</button>
+      <button class="signup-button" onclick="myFunction()" id="signup-form-submit">Sign up</button>
       <p>Already have an account? <a href="login.html">Login</a></p>
     </form>
   </div>
+
+  <script>
+    function myFunction() {
+      const loginForm = document.getElementById("signup-form");
+      const loginButton = document.getElementById("signup-form-submit");
+
+      loginButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        const name = loginForm.name.value;
+        const email = loginForm.email.value;
+        const password = loginForm.password.value;
+
+        if (email === "email@ucla.edu" && password === "password") {
+          alert("This account exists.");
+        }
+        else {
+          location.replace('./profile.html');
+        }
+      })
+    }
+  </script>
 </body>
+
 </html>
