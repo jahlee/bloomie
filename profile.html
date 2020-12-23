@@ -1,11 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Profile</title>
+  <link rel="stylesheet" href="./code/css/profile.css">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-  
+  <!-- Tab code from https://www.w3schools.com/howto/howto_js_vertical_tabs.asp -->
+  <!-- Tab links -->
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Dash')" id="defaultOpen"><span><i class="fa fa-circle fa-2x"></i>
+        &emsp;Dash</span></button>
+    <button class="tablinks" onclick="openTab(event, 'Lists')"><span><i class="fa fa-circle fa-2x"></i>
+        &emsp;Lists</span></button>
+    <button class="tablinks" onclick="openTab(event, 'Groups')"><span><i class="fa fa-circle fa-2x"></i>
+        &emsp;Groups</span></button>
+    <button class="tablinks" onclick="openTab(event, 'Settings')"><span><i class="fa fa-circle fa-2x"></i>
+        &emsp;Settings</span></button>
+    <button class="tablinks" onclick="location.href='https://www.youtube.com/watch?v=fhYw-UUpANM'" id="logout">Log
+      Out</button>
+  </div>
+
+  <!-- Tab content -->
+  <div id="Dash" class="tabcontent">
+    <h3>Dash</h3>
+    <p>London is the capital city of England.</p>
+  </div>
+
+  <div id="Lists" class="tabcontent">
+    <h3>Lists</h3>
+    <p>Paris is the capital of France.</p>
+  </div>
+
+  <div id="Groups" class="tabcontent">
+    <h3>Groups</h3>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+
+  <div id="Settings" class="tabcontent">
+    <h3>Settings</h3>
+    <p>Beep boop bop.</p>
+  </div>
+
+  <script src="code/js/profile.js"></script>
 </body>
+
 </html>
